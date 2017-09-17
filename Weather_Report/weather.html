@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Student Name: Deeksha Bhat  -->
+<!-- Student ID: 1001174031 -->
+<!--A weather Web Application -->
+<html lang="en"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <!-- Reference: http://getbootstrap.com/css/ -->
+  <!-- Reference: http://fontawesome.io/icons/ -->
+  <!-- Reference: http://openweathermap.org/ -->
+  <!-- Reference: http://www.w3schools.com/ -->
+  <!-- Reference: https://developer.mozilla.org -->
+  <style> 
+    div.show {
+      display: block !important;
+      }  
+    div.hidden {
+      display: none !important;
+      visibility: hidden !important;
+      }
+    div.invisible{
+      visibility: hidden ;
+    }
+    div.img {
+    width:100%;
+    height: 100%;
+    }
+    .container{
+      height: 300px;
+    }
+  </style>
+  <head>
+    <title>A Weather Web Application</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="weather.js"></script>
+  </head>
+  <body onload="initialize();">
+  <h1>A Weather Web Application</h1>
+   <form>
+       <label>City: <input type="text" id="form-input"/></label>
+       <input type="button" onclick="sendRequest();" value="Display Info"/>
+   </form>
+   <div id = "container" class = "hidden" style="border:1px solid #cecece;background-size: cover; color: white">
+      <h2 id = "name"></h2> 
+      <div class = "col-md-6">
+        <h5>Geo-Coordinates:<span id = "geo_coordinate"></span> </h5>
+        <h5>Sunrise:<span id = "sun_rise"></span> </h5>
+        <h5>Sunset:<span id = "sun_set"></span> </h5>
+        <h5>Pressure:<span id = "pressure"></span>hPa </h5>
+        <h5>Humidity:<span id = "humidity"></span> </h5>
+        <h5>Cloud:<span id = "cloud"></span> </h5>
+        <h5>Visibility:<span id ="visibility"></span><h5>
+      </div>
+      <div class = "col-md-6" align="right">
+        <h4>Suggestion: <span id = "suggestion"></span><br/></h4>
+        <h2 id = "temperature" style ="padding-bottom: 0"></h2>
+        Min:<span id = "temperature_min"></span> <br/>
+        Max:<span id = "temperature_max"></span> <br/>
+        <h1 id = "symbol"></h1>
+        <footer>
+        <p>&copy; Deeksha Bhat</p>
+        </footer>
+      </div>
+   </div>
+  </body>
+</html>
